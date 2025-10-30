@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 
 int main() {
@@ -22,12 +22,19 @@ int main() {
         cout << "Sonuc: " << sayi1 << " + " << sayi2 << " = " << sonuc << endl;
     }
     else if (islem == '-') {
-        sonuc = sayi1 - sayi2;
-        cout << "Sonuc: " << sayi1 << " - " << sayi2 << " = " << sonuc << endl;
-    }
-    else {
-        cout << "Geçersiz islem girdiniz! Lütfen sadece + veya - kullanin." << endl;
-    }
+    // SBecene'nin Katkısı: Kalan temel işlemleri (Çarpma ve Bölme) ekledim.
 
+    else if (islem == '*') {
+        sonuc = sayi1 * sayi2;
+        cout << "Sonuc: " << sayi1 << " * " << sayi2 << " = " << sonuc << endl;
+    }
+    else if (islem == '/') {
+        if (sayi2 != 0) { // Bölme işleminde sıfıra bölme kontrolü
+            sonuc = sayi1 / sayi2;
+            cout << "Sonuc: " << sayi1 << " / " << sayi2 << " = " << sonuc << endl;
+        } else {
+            cout << "Hata: Sayi sifira bolunemez!" << endl;
+        }
+    }
+    
     return 0;
-}
