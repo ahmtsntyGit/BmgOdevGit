@@ -25,6 +25,10 @@ int main() {
         sonuc = sayi1 - sayi2;
         cout << "Sonuc: " << sayi1 << " - " << sayi2 << " = " << sonuc << endl;
     }
+    else if (islem=='*'){
+        sonuc= sayi1*sayi2;
+        cout <<"Sonuc: "<<sayi1<<"+"<<sayi2<<"="<<sonuc<<endl;
+    }
     else {
         cout << "Geçersiz islem girdiniz! Lütfen sadece + veya - kullanin." << endl;
     }
